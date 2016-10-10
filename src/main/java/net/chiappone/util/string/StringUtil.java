@@ -1,4 +1,4 @@
-package net.chiappone.util;
+package net.chiappone.util.string;
 
 /**
  * @author Kurtis Chiappone
