@@ -2,15 +2,14 @@ package net.chiappone.util.string;
 
 /**
  * @author Kurtis Chiappone
- * @date 10/9/2016
  */
 public class StringUtil {
 
     /**
      * Capitalizes the first letter of the given String.
      *
-     * @param s
-     * @return
+     * @param s the string to capitalize
+     * @return String with a capitalized first letter
      */
     public static String capitalizeFirstLetter( String s ) {
 
@@ -24,10 +23,10 @@ public class StringUtil {
      * Returns the Nth index of the char in a String. This method will return -1
      * if the Nth occurence if the specified char is not found in the String.
      *
-     * @param charToFind
-     * @param n
-     * @param s
-     * @return
+     * @param charToFind the char to find
+     * @param n          the position/index
+     * @param s          the String to search
+     * @return the index the char was found, or -1 if not found
      */
     public static int findNthIndexOf( char charToFind, int n, String s ) {
 
@@ -89,8 +88,8 @@ public class StringUtil {
      * and converts to camel-case if words are delimited by an underscore,
      * hyphen or period.
      *
-     * @param s
-     * @return
+     * @param s the string to sanitize
+     * @return Java sanitized name
      */
     public static String getJavaSanitizedName( String s ) {
 
@@ -130,20 +129,20 @@ public class StringUtil {
     /**
      * Removes commas from the given String.
      *
-     * @param str
-     * @return
+     * @param s the string to manipulate
+     * @return the string without commas
      */
-    public static String removeCommas( String str ) {
+    public static String removeCommas( String s ) {
 
-        return str.replaceAll( ",", "" );
+        return s.replaceAll( ",", "" );
 
     }
 
     /**
      * Removes quotes from the given String.
      *
-     * @param s
-     * @return
+     * @param s the string to manipulate
+     * @return the string without quotes
      */
     public static String removeQuotes( String s ) {
 
@@ -155,8 +154,8 @@ public class StringUtil {
     /**
      * Returns the reverse of the given String.
      *
-     * @param s
-     * @return
+     * @param s the string to manipulate
+     * @return the reverse string
      */
     public static String reverse( String s ) {
 
@@ -168,8 +167,8 @@ public class StringUtil {
      * Removes multiples of inner white space from the given String and performs
      * the standard "outer" trim.
      *
-     * @param s
-     * @return
+     * @param s the string to trim
+     * @return the trimmed string
      */
     public static String trimAll( String s ) {
 
@@ -183,8 +182,8 @@ public class StringUtil {
      * line (60). This method is a helper which just calls
      * {@link #wrap(String, int)}
      *
-     * @param line
-     * @return
+     * @param line the line to wrap
+     * @return the wrapped line
      */
     public static String wrap( String line ) {
 
@@ -193,9 +192,9 @@ public class StringUtil {
     }
 
     /**
-     * @param line
-     * @param maxCharsPerLine
-     * @return
+     * @param line            the line to wrap
+     * @param maxCharsPerLine the max number of chars per line
+     * @return the wrapped line
      */
     public static String wrap( String line, int maxCharsPerLine ) {
 
@@ -209,10 +208,10 @@ public class StringUtil {
      * This is useful for wrapping, especially in JOptionPanes where wrapping is
      * not a supported behavior.
      *
-     * @param line
-     * @param maxCharsPerLine
-     * @param htmlSafe
-     * @return
+     * @param line            the line to wrap
+     * @param maxCharsPerLine the max number of chars per line
+     * @param htmlSafe        true to use HTML breaks rather than line breaks
+     * @return the wrapped line
      */
     public static String wrap( String line, int maxCharsPerLine, boolean htmlSafe ) {
 
@@ -249,8 +248,10 @@ public class StringUtil {
     }
 
     /**
-     * @param line
-     * @return
+     * Wraps the given line with HTML safe breaks.
+     *
+     * @param line the line to wrap
+     * @return the wrapped line
      */
     public static String wrapHtmlSafe( String line ) {
 
@@ -259,9 +260,11 @@ public class StringUtil {
     }
 
     /**
-     * @param line
-     * @param maxCharsPerLine
-     * @return
+     * Wraps the given line with HTML safe breaks and max number of chars per line.
+     *
+     * @param line            the line to wrap
+     * @param maxCharsPerLine the max number of chars per line
+     * @return the wrapped line
      */
     public static String wrapHtmlSafe( String line, int maxCharsPerLine ) {
 
